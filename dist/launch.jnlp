@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>prj_CadUsu</title>
+        <vendor>ddamaceno</vendor>
+        <homepage href=""/>
+        <description>prj_CadUsu</description>
+        <description kind="short">prj_CadUsu</description>
+    <icon href="user.ico" kind="default"/>
+</information>
+    <update check="always"/>
+    <resources>
+        <j2se version="1.7+"/>
+        <jar href="prj_CadUsu.jar" main="true"/>
+    <jar href="lib/mysql-connector-java-5.1.28.jar"/>
+<jar href="lib/ojdbc6-11.1.0.jar"/>
+</resources>
+    <application-desc main-class="br.com.tdv.prj_app.ui.frmMain">
+    </application-desc>
+</jnlp>

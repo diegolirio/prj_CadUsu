@@ -18,20 +18,20 @@ public class FactoryConnection {
 			
 			// ******************** MYSQL ***************************************//
 			// Ex: "jdbc:mysql://localhost/BANCO_DE_DADOS?user=root&password=root"
-			this.url = "jdbc:mysql://localhost/dbmysql";
-			this.user = "root";
-			this.password = "root";
+//			this.url = "jdbc:mysql://localhost/dbmysql";
+//			this.user = "root";
+//			this.password = "root";
 			
 			// ******************** Oracle ***************************************//
 			//"jdbc:oracle:thin:@201.63.16.210:1521/tdp";						
-			//this.url = "jdbc:oracle:thin:@201.63.16.210:1521/tdp";
-			//this.user = "wservice";
-			//this.password = "wservice";			
+			this.url = "jdbc:oracle:thin:@192.9.200.15:1521/tdp";
+			this.user = "tdvadm";
+			this.password = "aged15";			
 			
 			try {
 				
-				//Class.forName("oracle.jdbc.driver.OracleDriver");
-				Class.forName("com.mysql.jdbc.Driver");
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				//Class.forName("com.mysql.jdbc.Driver");
 				//com.mysql.jdbc.D
 				conn = DriverManager.getConnection(this.url, 
 												   this.user, 

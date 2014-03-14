@@ -21,8 +21,8 @@ public class UserDao implements UserDB {
     public void insert(User user) {
         int result = -1;
         Statement stmt = null;
-        String sql = "Insert into user (name, email, password, dateRegistration) " +
-                     "values ('" + user.getName() + "','" + user.getEmail() + "', '" + user.getPassword() + "', current_date);";
+        String sql = "Insert into USERS_USERS (name, email, password) " +
+                     "values ('" + user.getName() + "','" + user.getEmail() + "', '" + user.getPassword() + "')";
         try {
             stmt = this.conn.createStatement();
             result = stmt.executeUpdate(sql);
@@ -36,7 +36,7 @@ public class UserDao implements UserDB {
     public void update(User user) {
         int result = -1;
         Statement stmt = null;
-        String sql = "Update user set name = '" + user.getName() + "', email = '" + user.getEmail() + "' where id = " + user.getId();
+        String sql = "Update USERS_USERS set name = '" + user.getName() + "', email = '" + user.getEmail() + "' where id = " + user.getId();
         try {
             stmt = this.conn.createStatement();
             result = stmt.executeUpdate(sql);
@@ -51,7 +51,7 @@ public class UserDao implements UserDB {
         User user = null;
         Statement stmt = null;
         ResultSet rs = null;
-        String sql = "Select * from user where id = " + id;
+        String sql = "Select * from users_users where id = " + id;
         try {
             stmt = this.conn.createStatement();
             rs = stmt.executeQuery(sql);
@@ -73,7 +73,7 @@ public class UserDao implements UserDB {
         List<User> list = null;
         Statement stmt = null;
         ResultSet rs = null;
-        String sql = "Select * from user;";
+        String sql = "Select * from users_users";
         try {
             stmt = this.conn.createStatement();
             rs = stmt.executeQuery(sql);
@@ -96,7 +96,7 @@ public class UserDao implements UserDB {
     public void delete(User user) {
         int result = -1;
         Statement stmt = null;
-        String sql = "delete from user where id = " + user.getId();
+        String sql = "delete from USERS_USERS where id = " + user.getId();
         try {
             stmt = this.conn.createStatement();
             result = stmt.executeUpdate(sql);
